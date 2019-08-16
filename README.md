@@ -1,7 +1,10 @@
-# Greedy Algorithms
+# Greedy Algorithms (Algoritmos Devoradores.)
 Repositorio sobre los algoritmos devoradores. 
 Se presentará un esquema general, descripición, 
-elementos que lo componen y ejemplos.
+elementos que lo componen y ejemplos de uso. Para ello se
+ha realizado un resumen y modificado las partes que he creido pertinentes
+del temario dado en la asignatura **"Diseño de Algoritmos "** añadiendo
+y traduciendo los algoritmos del temario a código *python*.
 
 ### Elementos:
 
@@ -46,3 +49,50 @@ def greedy(candidates_set):
     return candidates_selected_set   
     
 ```
+
+### The Knapsack problem (El problema de la mochila.)
+
+"Dado un cojunto *O* de objetos, cada uno con un valor *v* y un peso
+ *p*, y una mochila con una capacidad  *c*, que limita el peso total que puede transportar,
+ se desea hallar la composición de la mochila que maximiza el valor de la carga."
+ 
+ - En su versión continua, donde los objetos pueden fraccionarse, puede
+ resolverse con un algoritmo devorador de forma óptima, usando la 
+ estrategia correcta para la selección de objetos. Esta estrategia
+ se implementa dentro de la **función de selección**.
+ 
+ - **Estrategia**: Se seleccionaran los objetos en orden decreciente de relación
+ de *valor/peso*.
+ 
+ ### Elementos
+ 
+ - **Conjunto de candidatos**:  Los objetos que queremos meter en la mochila.
+ 
+ - **Función Solución**: Comprobar si la mochila está llena.
+ 
+ - **Función Selección**: Elegir el objeto con mayor ratio *valor/peso*
+ 
+ - **Función de factibilidad**: Que el objeto se pueda introducir en la 
+ mochila sin exceder la capacidad de esta.
+ 
+ - **Función objetivo:** La suma de los valores de los objetos que hay
+ en la mochila.
+ 
+ - **Objetivo**: Maximizar.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Fuentes: "Algoritmos Devoradores", por A. Salguero, F. Palomo, I. Medina
+Universidad de Cádiz.
+ 
+ 
