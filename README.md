@@ -50,7 +50,7 @@ def greedy(candidates_set):
     
 ```
 
-### The Knapsack problem (El problema de la mochila.)
+# The Knapsack problem (El problema de la mochila.)
 
 "Dado un cojunto *O* de objetos, cada uno con un valor *v* y un peso
  *p*, y una mochila con una capacidad  *c*, que limita el peso total que puede transportar,
@@ -131,7 +131,34 @@ def select(candidates_set):
 if candidato.peso <= capacidad:  
 ```
  
- 
+# The coin change problem (El problema del cambio de moneda.)
+
+"Sea *M* un conjunto de monedas y *c* una cantidad a devolver. Por cada
+tipo de moneda de valor *v* se dispone de un suministro  de *k* unidades
+. Se desea hallar la composición del cambio  que posee el menor número de
+monedas."
+
+- En general, esta aproximación no produce una solución óptima,
+solo para un conjunto determinados de monedas, como por ejemplo
+si se dispondría de un número de un número suficiente de monedas de
+1, 5, 10, 15, 25, 50, 100, 200 y 500 unidades.
+
+- **Estrategia**: Elegir, de las que quedan, la de mayor valor y si es posible
+seleccionar todas las monedas del mismo valor de una vez.
+
+### Elementos:
+
+- **Conjunto de candidatos**: Monedas.
+
+- **Función solución**: El cambio a devolver es igual a 0.
+
+- **Función de selección**: Elegir las monedas de mayor valor.
+
+- **Función de factibilidad**: Valor de las monedas no supera el valor a devolver.
+
+- **Función objetivo**: Número de monedas devueltas.
+
+- **Objetivo**: Minimizar. 
  
  
  
