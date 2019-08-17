@@ -80,9 +80,56 @@ def greedy(candidates_set):
  
  - **Objetivo**: Maximizar.
  
+ ### Resolución mediante algoritmo devorador:
  
+ ```python
+def knapsack_problem(objetos, capacidad):
+
+    candidates_set = objetos[:]
+    candidates_selected = []
+
+    while capacidad != 0 and candidates_set:
+        candidato = select(candidates_set)
+        candidates_set.remove(candidato)
+
+        if candidato.peso <= capacidad:
+            capacidad = capacidad-candidato.peso
+            candidates_selected.append(candidato)
+        else:
+            candidato.peso = capacidad
+            candidato.valor = candidato.valor * capacidad / candidato.peso
+            candidates_selected.append(candidato)
+            capacidad = 0
+
+    return candidates_selected
+
+
+```
+
+### Función de Selección:
  
- 
+ ```python
+import math
+
+def select(candidates_set):
+    limit = -math.inf
+    best_candidate = None
+
+    for candidate in candidates_set:
+        if candidate.valor/candidate.peso > limit:
+            best_candidate = candidate
+            limit = candidate.valor/candidate.peso
+
+    return best_candidate
+
+
+ ```
+ ### Función de Factibilidad:
+ Implementada directamente en el código del algoritmo principal con
+ la sentencia: 
+ ```python
+if candidato.peso <= capacidad:  
+```
  
  
  
