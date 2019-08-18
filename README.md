@@ -121,8 +121,6 @@ def select(candidates_set):
             limit = candidate.valor/candidate.peso
 
     return best_candidate
-
-
  ```
  ### Función de Factibilidad:
  Implementada directamente en el código del algoritmo principal mediante
@@ -130,7 +128,23 @@ def select(candidates_set):
  ```python
 if candidato.peso <= capacidad:  
 ```
- 
+ ### Función Solución:
+ ```python
+while capacidad != 0 ...:
+```
+
+### Función objetivo:
+Especificada mediante la condición del bucle, y forma parte de la condición
+de parada del algoritmo.
+```python
+def objetivo(mochila):
+    valor_total = 0
+
+    for objeto in mochila:
+        valor_total += objeto.valor
+
+    return valor_total
+```
 # The Coin Change problem (El problema del cambio de moneda.)
 
 "Sea *M* un conjunto de monedas y *c* una cantidad a devolver. Por cada
@@ -159,6 +173,70 @@ seleccionar todas las monedas del mismo valor de una vez.
 - **Función objetivo**: Número de monedas devueltas.
 
 - **Objetivo**: Minimizar. 
+
+###Resolución mediante algoritmo devorador:
+
+```python
+def coinChange(conjunto_monedas, cambio):
+    candidates_set = conjunto_monedas
+    candidates_selected = []
+    c = cambio
+    candidate_selected = None
+
+    while c != 0 and candidates_set:
+
+        candidate = select(candidates_set)
+        candidates_set.remove(candidate)
+        candidate.cantidad = min(candidate.cantidad, c // candidate.valor)
+        if candidate.cantidad > 0:
+            candidates_selected.append(candidate)
+            c = c - candidate.valor * candidate.cantidad
+
+    return candidates_selected
+```
+
+### Función de selección:
+```python
+import math
+
+def select(candidate_set):
+    candidate_selected = None
+    limit = -math.inf
+
+    for candidate in candidate_set:
+        if limit < candidate.valor:
+            candidate_selected = candidate
+            limit = candidate.valor
+
+    return candidate_selected
+```
+
+### Función de factibilidad:
+Se realiza mediante estas dos sentencias. Primero se obtiene el mínimo
+número de esas monedas con las que se puede dar el cambio. Si es mayor
+que 0 entonces se puede dar un cambio parcial o total con al menos
+una moneda de ese valor.
+```python
+candidate.cantidad = min(candidate.cantidad, c // candidate.valor)
+if candidate.cantidad > 0:
+```
+
+### Función Solución:
+Especificada mediante la condición del bucle, y forma parte de la condición
+de parada del algoritmo.
+```python
+while c != 0 ... :
+```
+
+### Función Objetivo:
+```python
+def objetivo(monedas):
+    suma = 0
+    for moneda in monedas:
+        suma += moneda.cantidad
+
+    return suma
+```
  
  
  
