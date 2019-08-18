@@ -125,13 +125,13 @@ def select(candidates_set):
 
  ```
  ### Función de Factibilidad:
- Implementada directamente en el código del algoritmo principal con
+ Implementada directamente en el código del algoritmo principal mediante
  la sentencia: 
  ```python
 if candidato.peso <= capacidad:  
 ```
  
-# The coin change problem (El problema del cambio de moneda.)
+# The Coin Change problem (El problema del cambio de moneda.)
 
 "Sea *M* un conjunto de monedas y *c* una cantidad a devolver. Por cada
 tipo de moneda de valor *v* se dispone de un suministro  de *k* unidades
