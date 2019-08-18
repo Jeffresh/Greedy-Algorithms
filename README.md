@@ -174,7 +174,7 @@ seleccionar todas las monedas del mismo valor de una vez.
 
 - **Objetivo**: Minimizar. 
 
-###Resolución mediante algoritmo devorador:
+### Resolución mediante algoritmo devorador:
 
 ```python
 def coinChange(conjunto_monedas, cambio):
