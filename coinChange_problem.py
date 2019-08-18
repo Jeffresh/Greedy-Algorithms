@@ -32,7 +32,7 @@ def select(candidate_set):
 
 
 def coinChange(conjunto_monedas, cambio):
-    candidates_set = conjunto_monedas
+    candidates_set = conjunto_monedas[:]
     candidates_selected = []
     c = cambio
     candidate_selected = None
