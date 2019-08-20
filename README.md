@@ -237,14 +237,37 @@ def objetivo(monedas):
 
     return suma
 ```
+
+## Árbol de expansión mínimo (Minimum spanning tree.)
+
+"Dado un grafo *G = <V,A>* siendo *V* los vértices y *A* las aristas que componen el grafo *G*" conexo y ponderado con valores no negativos
+ en sus aristas, se trata de calcular un subgrafo *H = <V,S>* conexo y acíclico de
+ forma que la suma de los valores de sus aristas sea mínima."
+ 
+ ### Características:
+ 
+ - Se demuestra que el subgrafo resultante es un árbol.
+ - Un grafo puede tener más de un árbol de expansión mínimo.
+ - La comprobación que se debe realizar al ir generando el subgrafo para mantenerlo acíclico es costosa,
+ así que se simplifica manteniendo el subgrafo acíclico por construcción.
+ - Supondremos un orden en *A* (aristas) inducido por la función de ponderación:
+ *{i, j} <= {k, j} <=> p(i, j)*
+ 
+ ### Elementos:
+ 
+ - **Conjunto candidatos**: Las Aristas que componen el grafo.
+ - **Función Solución**: Hemos conseguido unir todos los vertices sin ciclos.
+ - **Función Selección**: Obtener la arista con menos valor.
+ - **Función de factibilidad**: Comprobar si al introducir una nueva arista, genera un ciclo.
+ - **Función objetio**: Suma total del valor de las aristas que conforman nuestro árbol de expansión mínimo.
+ - **Objetivo**: Minimizar.
  
  
  
  
  
  
- 
-###Fuentes: 
+## Fuentes: 
  
 A. Salguero, F. Palomo, I. Medina.<br>
 Algoritmos Devoradores.
