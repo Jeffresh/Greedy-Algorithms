@@ -244,7 +244,27 @@ def objetivo(monedas):
  
  
  
- Fuentes: "Algoritmos Devoradores", por A. Salguero, F. Palomo, I. Medina
-Universidad de Cádiz.
+###Fuentes: 
  
+A. Salguero, F. Palomo, I. Medina.<br>
+Algoritmos Devoradores.
+Universidad de Cádiz.
+
+Brassard, Gilles & Bratley, Paul.<br>
+Fundamentos de Algoritmia.
+Prentice-Hall. 1997.
+
+Cormen, Thomas H.; Leiserson, Charles E.; Rivest, Ronald L. &
+Stein, Cliord.<br>
+Introduction to Algorithms.
+MIT Press. 2001. 2a ed.
+
+Manber, Udi.<br>
+Introduction to Algorithms. A Creative Approach.
+Addison-Wesley. 1989.
+ 
+ 
+Sedgevick, Robert.<br>
+Algorithms.
+Addison-Wesley. 1988. 2a edición.
  
