@@ -15,7 +15,6 @@ def select(candidates_set, cost):
 
 def dijkstra(cost_matrix, number_of_vertices, initial_vertex):
     candidate_set = []
-    candidates_selected = []
     cost = [0]*number_of_vertices-1
     path = [0]*number_of_vertices-1
 
@@ -29,4 +28,11 @@ def dijkstra(cost_matrix, number_of_vertices, initial_vertex):
     while candidate_set.count() != 0:
 
         k = select(candidate_set, cost)
+        candidate_set.remove(k)
+
+        for vertex in candidate_set:
+            if cost[k] + cost_matrix[k, vertex] < cost[vertex]:
+                cost[vertex] = cost[k] + cost_matrix[k, vertex]
+                path[vertex] = k
+
 
