@@ -31,6 +31,7 @@ def prim(matrix, number_of_vertices):
                 cost[j] = matrix=[vertice, j]
                 path[j] = vertice
 
+    return candidates_selected
 
 
 

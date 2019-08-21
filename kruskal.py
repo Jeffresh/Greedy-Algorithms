@@ -43,3 +43,5 @@ def Kruskal(vertices,aristas):
         if p1 != p2:
             fusion(p,number_of_vertices,p1,p2)
             candidates_selected.append(arista_seleccionada)
+
+    return candidates_selected
