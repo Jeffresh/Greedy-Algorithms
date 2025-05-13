@@ -145,7 +145,7 @@ def objetivo(mochila):
 
     return valor_total
 ```
-# The Coin Change problem (El problema del cambio de moneda.)
+# The Coin Change problem (El problema del cambio de moneda)
 
 "Sea *M* un conjunto de monedas y *c* una cantidad a devolver. Por cada
 tipo de moneda de valor *v* se dispone de un suministro  de *k* unidades
