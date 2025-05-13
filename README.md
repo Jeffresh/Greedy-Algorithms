@@ -50,7 +50,7 @@ def greedy(candidates_set):
     
 ```
 
-# The Knapsack problem (El problema de la mochila.)
+# The Knapsack problem (El problema de la mochila)
 
 "Dado un cojunto *O* de objetos, cada uno con un valor *v* y un peso
  *p*, y una mochila con una capacidad  *c*, que limita el peso total que puede transportar,
