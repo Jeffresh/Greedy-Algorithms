@@ -1,4 +1,4 @@
-# Greedy Algorithms (Algoritmos Devoradores.)
+# Greedy Algorithms (Algoritmos Devoradores)
 Repositorio sobre los algoritmos devoradores. 
 Se presentará un esquema general, descripición, 
 elementos que lo componen y ejemplos de uso. Para ello se
@@ -238,7 +238,7 @@ def objetivo(monedas):
     return suma
 ```
 
-## Árbol de expansión mínimo (Minimum spanning tree.)
+## Árbol de expansión mínimo (Minimum spanning tree)
 
 "Dado un grafo *G = <V,A>* siendo *V* los vértices y *A* las aristas que componen el grafo *G*" conexo y ponderado con valores no negativos
  en sus aristas, se trata de calcular un subgrafo *H = <V,S>* conexo y acíclico de
@@ -285,7 +285,6 @@ MIT Press. 2001. 2a ed.
 Manber, Udi.<br>
 Introduction to Algorithms. A Creative Approach.
 Addison-Wesley. 1989.
- 
  
 Sedgevick, Robert.<br>
 Algorithms.
